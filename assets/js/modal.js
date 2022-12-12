@@ -1,6 +1,6 @@
 /********************* NAV **********************/
 function editNav() {
-  var x = document.getElementById("myTopnav");
+  let x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
@@ -16,18 +16,18 @@ const closeModalX = document.querySelector(".close");
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// eventlistener
-closeModalX.addEventListener("click", closeModal);
-
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-//close modal
+// eventlistener closeModal
+closeModalX.addEventListener("click", closeModal);
+
+//Fonction close modal
 function closeModal() {
   modalbg.style.display = "none";
-  //form.style.opacity: Pr afficher la pop up successConfirmation
+  //form.style.opacity: Pr réafficher la pop up form
   form.style.opacity = "1";
   successConfirmation.style.display = "none";
 }
